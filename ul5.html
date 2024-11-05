@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Styling for balloon animation */
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            animation: float 10s infinite ease-in-out;
+            border-radius: 50%;
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-70vh) rotate(15deg); }
+            100% { transform: translateY(-100vh) rotate(-15deg); }
+        }
+
+        /* Layout adjustments */
+        body, html {
+            height: 100%;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body class="bg-blue-200 text-center relative overflow-x-hidden">
+    <!-- Wrapper untuk konten utama -->
+    <div class="content-wrapper relative z-10">
+
+        <h1 class="text-3xl font-extrabold text-black-500">Happy Birthday Nosdheatry Nierbala</h1>
+        <p class="text-base text-black-500">Celebrate your special day with me even if I'm not by your side</p>
+        <button id="celebrateBtn" class="bg-blue-600 text-white px-4 py-2 rounded-full">Celebrate Now</button>
+        <p class="text-base text-black-500">Enjoy your birthday sayaaang, we'll see you soon</p>
+
+        <img src="./cantik.jpeg" alt="Birthday Cake" class="w-48 mx-auto">
+
+        <a href="ul.html">
+            <button class="bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-semibold shadow-md">Back</button>
+        </a>
+    </div>
+
+    <footer class="bg-blue-800 text-center py-2 relative z-10 w-full">
+        <p class="text-white">With your best friends by <span class="font-bold">Happy Birthday!</span></p>
+        <p class="text-gray-300">Let's celebrate and have a great time!</p>
+    </footer>
+
+    <!-- Audio element -->
+    <audio id="birthdaySong" src="./hbd song.mp3" preload="auto"></audio>
+
+    <script>
+        // Function to create balloons
+        function createBalloons() {
+            for (let i = 0; i < 20; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 70%)`;
+                balloon.style.width = Math.random() * 50 + 30 + 'px';
+                balloon.style.height = balloon.style.width;
+                document.body.appendChild(balloon);
+            }
+        }
+
+        // Event listener for Celebrate button
+        document.getElementById('celebrateBtn').addEventListener('click', function() {
+            // Play the birthday song
+            const birthdaySong = document.getElementById('birthdaySong');
+            birthdaySong.play();
+
+            // Create balloon animation
+            createBalloons();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doa untuk Nosdheatry</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: hidden;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            background-size: 400% 400%;
+            animation: gradient 20s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            animation: rise 8s infinite;
+            opacity: 0.9;
+            border-radius: 50%;
+        }
+        @keyframes rise {
+            0% { transform: translateY(0); opacity: 0.9; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            animation: fall 4s infinite;
+            border-radius: 5px; /* Make confetti square */
+        }
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 90%;
+            margin: 0 auto;
+            overflow-y: auto;
+            max-height: 80vh;
+            position: relative;
+        }
+        .container:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <main class="flex justify-center items-center h-screen">
+        <div class="container">
+            <div class="content">
+                <h1 class="text-3xl font-extrabold text-purple-700 text-center shadow-lg">Ini dibaca juga yaa sayaaang</h1>
+                <p class="text-lg md:text-xl text-gray-800 text-center mt-4 leading-relaxed">
+                    Sayaaaang, di hari ulang tahun dan anniv kita ini, aku berdoa semoga hidup kamu selalu bahagia, semoga setiap langkah yang kamu ambil dipermudah sama Allah, setiap impianmu bisa jadi kenyataan, dan setiap tantangan yang kamu dan kita hadapi bisa dilewati dengan mulus tanpa adanya hambatan. Aku berharap kamu selalu dikasih kesehatan, kebahagiaan, dan umur yang panjang biar bisa sama aku teruss. Semoga Allah selalu melindungi kamu, menjauhkan kamu dari segala yang buruk, dan mendekatkan kamu dengan hal hal yang baik yaa sayaaang. Makasih banyak kamu udah jadi bagian besar dari hidup aku, yang selalu membuat hari hariku lebih berwarna dan bermakna. Semoga di usia yang sekarang ini kamu semakin bisa pilah pilih mana yang baik dan mana yang buruk, ngga gampang insecure, ngga gampang BT, ngga gampang emosi, dan ngga jutekin aku teruss😚. Selamat ulang tahun dan Anniversary yaa sayaaang. Semoga kita bisa bareng terus sampe kapanpun, sampe dunia ini ngga adaa. Aku sayaaang banget sama kamuu dan aku akan selalu ada buat kamuu sayaaang. LOVE YOU sayaangkuuu cintakuu Nosdheatry Nierbala❤️❤️‍🔥💜🖤💚💖💙💛💕💞💘
+                </p>
+                <a href="ul.html" class="text-blue-600 hover:underline mt-4 inline-block text-center transition duration-300 ease-in-out transform hover:scale-110">Kembali ke Beranda</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Generate balloons
+        for (let i = 0; i < 15; i++) {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = Math.random() * 100 + 'vw';
+            balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            balloon.style.width = Math.random() * 40 + 30 + 'px';
+            balloon.style.height = balloon.style.width;
+            document.body.appendChild(balloon);
+        }
+
+        // Generate confetti
+        for (let i = 0; i < 150; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confetti.style.animationDelay = Math.random() * 4 + 's';
+            confetti.style.animation = `fall ${Math.random() * 4 + 2}s linear infinite`;
+            document.body.appendChild(confetti);
+        }
+    </script>
+</body>
+</html>

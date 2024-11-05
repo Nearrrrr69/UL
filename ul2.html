@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Ulang Tahun</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6b6b, #f7b733);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            flex-direction: column;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            position: relative;
+            top: -20px; /* Moved slightly higher */
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .text-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .text-highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .btn-link,
+        .btn-celebrate {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #1d4ed8;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn-link:hover {
+            transform: scale(1.1);
+            background-color: #4caf50;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-celebrate {
+            animation: rotate 3s ease-in-out infinite;
+        }
+
+        .btn-celebrate:hover {
+            background-color: #ff6b6b;
+            transform: scale(1.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Klik musik dulu baru dibaca yaa cantikk💖</h1>
+    </header>
+    <main class="card">
+        <div class="icon">🎉</div>
+        <p class="text-message">
+            <span class="text-highlight">Selamat ulang tahun yang ke-21 sayaaang!</span> Semoga di usia yang sekarang ini kamu selalu diberi kesehatan, kebahagiaan, tambah sayang sama akuu, dan selalu diberi kelancaran buat setiap apa yang kamu lakuin. Ngga kerasa juga yaa kita udah bareng bareng selama <span class="text-highlight">3 tahun</span>. Makasih banyak yaa sayaaang buat setiap momen yang udah kita lalui yang baik maupun yang susah. Sama kamu semuanya kerasa lebih asikk karena dengan adanya kamu, hidupku jadi lebih berwarna dan ngga flat ajaa. Semoga kedepannya kita bisa terus saling mendukung dan jadi yang terbaik buat satu sama lain yaa sayaaang. Sekali lagi selamat ulang tahun yang ke-21 tahun dan Happy Anniversary kita yang ke-3 tahun sayaaangkuu.
+        </p>
+        <a href="ul.html" class="btn-link">KEMBALINYA DISINI YAA CANTIK</a>
+        <button id="celebrateBtn" class="btn-celebrate">Musik 🎶</button>
+    </main>
+
+    <audio id="birthdaySong">
+        <source src="./home.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script>
+        document.getElementById('celebrateBtn').addEventListener('click', function() {
+            const birthdaySong = document.getElementById('birthdaySong');
+            birthdaySong.play();
+        });
+    </script>
+</body>
+
+</html>

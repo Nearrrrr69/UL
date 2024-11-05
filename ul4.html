@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Gambar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Heroicons untuk ikon -->
+    <script src="https://unpkg.com/@heroicons/vue/outline" defer></script>
+</head>
+
+<body class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 h-screen flex items-center justify-center relative">
+    <a class="inline-block py-2 px-3 rounded-xl text-lg font-mono absolute top-4 left-7" href="./ul.html">Back</a>
+    <!-- Container Galeri -->
+    <div class="relative w-full max-w-4xl overflow-hidden">
+        <!-- Tombol navigasi kiri -->
+        <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 text-white rounded-full w-12 h-12 flex items-center justify-center z-10 hover:bg-opacity-100 transition-all">
+            <!-- Ikon panah kiri -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <!-- Galeri gambar -->
+        <div id="gallery" class="flex transition-transform duration-500 w-full items-center">
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./pertama kali ketemu.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Haii, ini foto pertama kali kita yang aku ambil diem2 hehe😚</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./sedot hidung.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Awasss ntar kamu kesedot hidung akuu🏃‍♀️💨</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./kaya kelinci.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Lucu bangett kaya kelinci😚🥰</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./naik motor pegal2.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Walaupun aku pegal pegal naik motor tetep seneng karena kamu seneng naik motorr🥰🥰</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./hp jatoh.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Eh hpnya kaya mau jatohh</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./aleman bgt.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Aku aleman bangett yaa sama kamuu😭</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./foto anniv pertama.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Ini foto anniv kita yang pertamaa ngga sihh😚🥰</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./kapan dikondangin.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Kita kapan yaa di kondangin🥰</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./hidung besar.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Ini apa yaahh kok hidung aku besar sekalii😭</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="ditipu usaha.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Kita lagi coba usaha malah ditipu yaa sayaaang🥺</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./mau nonton.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">ni waktu itu mau nonton kamu pake baju seksi bangett😡</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./lovv lovv.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Lovv lovv tangan kamu yang lucuu🥰</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./nongkrong di bk.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Ini kita nongkrong di “BK” pasti abis mam cilung😚</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./luar kota.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Ininpertama kalinya kita ke luar kota bareng🥰🥰</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./padahal cantik.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Dulu malu2 kohh, padahal cantik lohh😡</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./mecicil.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Apa loe mecicil?? Gelud sinii😡😚</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./seblak.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Mau mam seblak pun masih pake masker🤣</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./awal2 pacaran BS.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Ini awal pacaran apa yaa😚</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./masih malu BS.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">ni kamu masih malu2 masih pake masker terus🥰</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./cocok jadi ibunya anakku.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Cocok banget jadi ibu dari anak2ku suatu saat😚</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./foto udah lama tp bahagia.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Foto udah lama banget tp masih inget bahagiaku waktu itu🥺🥺</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./salting dapet bunga.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Kamu seneng bangett dapet bunga sampe salting terus😚😚</p> <!-- Caption -->
+            </div>
+            <!-- Gambar pertama -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./kasian matanya.jpeg" alt="Foto 1">
+                <p class="text-center text-gray-800 mt-2">Kaciaan mata kamu kaya gitu malah aku ajak main🥺</p> <!-- Caption -->
+            </div>
+            <!-- Gambar kedua -->
+            <div class="flex-shrink-0 w-1/2 p-2">
+                <img class="w-full h-auto object-cover rounded-lg aspect-[3/4]" src="./suka fotonya.jpeg" alt="Foto 2">
+                <p class="text-center text-gray-800 mt-2">Ini si kapan yaa? Kamu cantik bangett😭😭</p> <!-- Caption -->
+            </div>
+            <!-- Tambahkan lebih banyak gambar -->
+        </div>
+
+        <!-- Tombol navigasi kanan -->
+        <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 text-white rounded-full w-12 h-12 flex items-center justify-center z-10 hover:bg-opacity-100 transition-all">
+            <!-- Ikon panah kanan -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        let currentPosition = 0;
+        const totalImages = gallery.children.length; // Total gambar dalam galeri
+        const imagesPerView = 2; // Jumlah gambar per tampilan
+        const maxPosition = Math.ceil(totalImages / imagesPerView) - 1; // Posisi maksimum
+
+        function updateGallery() {
+            const offset = -currentPosition * 100; // Perhitungan untuk menggeser galeri
+            gallery.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPosition > 0) {
+                currentPosition -= 1;
+            } else {
+                currentPosition = maxPosition; // Kembali ke gambar terakhir
+            }
+            updateGallery();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPosition < maxPosition) {
+                currentPosition += 1;
+            } else {
+                currentPosition = 0; // Kembali ke gambar pertama
+            }
+            updateGallery();
+        });
+
+    </script>
+
+</body>
+
+</html>

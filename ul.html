@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Selamat Ulang Tahun!</title>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+
+        @keyframes burst {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        .animate-float {
+            animation: float 5s linear forwards;
+        }
+
+        .animate-burst {
+            animation: burst 0.5s ease forwards;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 78px;
+            height: 80px;
+            background-image: url('balon animasi3.png'); /* Ganti dengan gambar balon */
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: yellow; /* Ganti dengan warna yang diinginkan */
+            border-radius: 50%;
+            pointer-events: none; /* Prevent mouse events */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 h-screen flex flex-col items-center justify-center relative overflow-hidden">
+    <header class="bg-cover shadow w-full p-4 text-center">
+        <h1 class="text-3xl font-bold text-blue-600">SELAMAT ULANG TAHUN YANG KE 21 TAHUN DAN ANNIVERSARY YANG KE 3 TAHUN SAYAAANG</h1>
+    </header>
+    <main class="text-center mt-10 px-4">
+        <h2 class="text-2xl font-semibold">Buat SAYANGNYA MAMAS FAJAR SB, Nosdheatry Nierbala yang ke-21 tahun dan Anniversary sama aku yang ke 3 tahun yaaa sayaaangkuu</h2>
+        <h2 class="text-center mt-10">❤️❤️‍🔥💜🖤💚💖💙💛💕💞💘</h2>
+        <p class="mt-4 text-2xl font-semibold">SEMOGA HARI INI JADI HARI YANG BAHAGIA BUAT KAMU YAA CANTIKK, NGGA BOLEH INSECURE😡🔥COBA SI LIAT TUH DIBAWAH, CANTIK KAANN</p>
+        <img src="dhea.png" alt="Foto Nosdheatry" class="mt-5 rounded-full w-32 h-32 object-cover mx-auto">
+        <p class="mt-4 text-2xl font-semibold">ANGKA ROMAWI DIBAWAH DI KLIK URUTAN YAA SAYAAANG</p>
+        <div class="mt-6">
+            <a href="ul2.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">I</a>
+            <a href="ul3.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 ml-4">II</a>
+            <a href="ul4.html" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 ml-4">III</a>
+            <a href="ul5.html" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">IV</a>
+            <a href="ul6.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">X</a>
+        </div>
+    </main>
+    <script>
+        // Membuat balon bergerak
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.classList.add('balloon', 'animate-float');
+            balloon.style.left = Math.random() * 100 + 'vw';
+            balloon.style.top = '-80px'; // Start above the viewport
+            document.body.appendChild(balloon);
+
+            // Menghapus balon setelah animasi selesai
+            balloon.addEventListener('animationend', () => {
+                createFirework(balloon.style.left); // Create firework effect
+                balloon.remove();
+            });
+        }
+
+        // Membuat efek petasan
+        function createFirework(leftPosition) {
+            const firework = document.createElement('div');
+            firework.classList.add('firework', 'animate-burst');
+            firework.style.left = leftPosition;
+            firework.style.bottom = '0'; // Start at the bottom
+            document.body.appendChild(firework);
+
+            // Menghapus efek petasan setelah animasi selesai
+            firework.addEventListener('animationend', () => {
+                firework.remove();
+            });
+        }
+
+        // Membuat balon setiap detik
+        setInterval(createBalloon, 1000);
+    </script>
+</body>
+</html>
